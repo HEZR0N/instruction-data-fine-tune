@@ -8,5 +8,5 @@ The finetuned model was based off of:
 
 Required Libraries/Modules made be installed with this command:
 ```
-pip install git+https://github.com/unslothai/unsloth triton xformers
+pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformers==0.0.25 peft==0.10.0 git+https://github.com/unslothai/unsloth
 ```
