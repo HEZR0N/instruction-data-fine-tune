@@ -1,8 +1,15 @@
 # Instruction Finetuning 
 This repo was created for an assignment in my NLP/LLM class. The goal was to create a new instruction dataset (based on a pre-existing non-instruction dataset), fine-tuned model once with the new dataset and once with a combination of
 the original dataset and the newset that the model was trained on, and examine the differences in performance.
-The finetuned model was based off of:
- - https://huggingface.co/unsloth/OpenHermes-2.5-Mistral-7B-bnb-4bit
+
+The original pre-trained model which will be fine-tuned is:
+ - https://huggingface.co/unsloth/OpenHermes-2.5-Mistral-7B-bnb-4bit    
+`OpenHermes-2.5` was trained off of this dataset
+ - https://huggingface.co/datasets/teknium/OpenHermes-2.5
+However, for training, we will only use a subset of that dataset:
+ - https://huggingface.co/datasets/jondurbin/airoboros-2.2
+The dataset that will be used to fine-tune `OpenHermes-2.5` will be based on this dataset
+ - https://huggingface.co/datasets/ag_news
 ## Requirements
  - Python 3.11.8
 
@@ -21,7 +28,7 @@ pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformer
 2. Run `python curate_instruction_dataset.py` to modify `ag_news` dataset to become an instruction-baed dataset for finetuning saved as folder `mixed_news_instruction_dataset`
 4. Run `train_on_news_instruction_dataset.py` to train the `OpenHermes` model on the instruction-based `ag_news` dataset saved as folder `openhermes_finetuned_model`
    - This will create a finetuned version of the `OpenHermes` model
-4. Run `train_on_combined_datasets.py` to train the `OpenHermes` model on the instruction-based `ag_news` dataset and the dataset openhermes was initially trained on saved as folder `openhermes_retune_finetuned_model`
+4. Run `train_on_combined_datasets.py` to train the `OpenHermes` model on the a dataset made of instruction-based `ag_news` dataset and the `airoboros-2.2` dataset saved as folder `openhermes_retune_finetuned_model`
    - This will create a different finetuned version of the `OpenHermes` model
  ### Evaluating the Models
  Uploading soon
