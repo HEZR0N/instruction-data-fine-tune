@@ -24,10 +24,7 @@ pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformer
 4. Run `train_on_combined_datasets.py` to train the `OpenHermes` model on the instruction-based `ag_news` dataset and the dataset openhermes was initially trained on saved as folder `openhermes_retune_finetuned_model`
    - This will create a different finetuned version of the `OpenHermes` model
  ### Evaluating the Models
-
-The program is currently set to generate ouputs (one word text completions) for all data in the dataset, but only creates plots and evalutes metrics for the layers of the first example.
-
-Below are the plots, metrics, and results that the program will output.
+ Uploading soon
 
 ## Metrics
 Uploading soon
