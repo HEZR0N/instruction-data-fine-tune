@@ -13,10 +13,17 @@ pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformer
 
 ## Usage
 
-1. Run `python download_model_and_data.py`
-   - This will download the pretrained model and datasets
-3. Run `python curate_instruction_dataset.py` to make the datasets ready to use for finetuning
-4. Run `train_on_combined_datasets.py` to create a model finetuned on an instruction version of the `ag_news` dataset
+### Fine-tuning OpenHermes
+1. Run `python download_model_and_data.py` to download and save the model and datasets locally
+ - This will download the pretrained `OpenHermes-2.5-Mistral-7B` model and 2 datasets
+   - The `OpenHermes-2.5-Mistral-7B` model was trained on a dataset (`teknium/OpenHermes-2.5`) with 1,000,000 elements, which itself is comprised of other smaller datasets. Due to time constraints, we will one of the sub-datasets, `airoboros-2.2`
+   - The `ag_news` dataset is collection of sentences from news articles
+2. Run `python curate_instruction_dataset.py` to modify `ag_news` dataset to become an instruction-baed dataset for finetuning saved as folder `mixed_news_instruction_dataset`
+4. Run `train_on_news_instruction_dataset.py` to train the `OpenHermes` model on the instruction-based `ag_news` dataset saved as folder `openhermes_finetuned_model`
+   - This will create a finetuned version of the `OpenHermes` model
+4. Run `train_on_combined_datasets.py` to train the `OpenHermes` model on the instruction-based `ag_news` dataset and the dataset openhermes was initially trained on saved as folder `openhermes_retune_finetuned_model`
+   - This will create a different finetuned version of the `OpenHermes` model
+ ### Evaluating the Models
 
 The program is currently set to generate ouputs (one word text completions) for all data in the dataset, but only creates plots and evalutes metrics for the layers of the first example.
 
