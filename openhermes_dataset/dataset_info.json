@@ -1,0 +1,54 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "airoboros-2.2",
+  "dataset_size": 82161302,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/jondurbin/airoboros-2.2@c6a0c2a5e58f2914bdb74dd5dee36f76df64b7f0/instructions.jsonl": {
+      "num_bytes": 87194316,
+      "checksum": null
+    }
+  },
+  "download_size": 87194316,
+  "features": {
+    "instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "response": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "category": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "skip_prompt_formatting": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "system": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 169355618,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 82161302,
+      "num_examples": 44838,
+      "dataset_name": "airoboros-2.2"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
