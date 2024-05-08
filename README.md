@@ -40,10 +40,57 @@ You may go to the next section if you wish to use the fine-tuned models I provid
 4. Run `train_on_combined_datasets.py` to train the `OpenHermes` model on the a dataset made of instruction-based `ag_news` dataset and the `airoboros-2.2` dataset saved as folder `openhermes_retune_finetuned_model`
    - This will create a different finetuned version of the `OpenHermes` model
  ### Evaluating the Models
- Uploading soon
+1. Run `python eval_with_mixed_news_instruction_dataset.py` to evaluate the 3 models. See `Evaluation Metrics` below
 
 ## Evaluation Metrics
-Uploading soon
+The fine-tuned model performed the best, as expected. Surprisingly though, the re-tuned model performed te worst. 
+
+```
+EVALUATING PRE-TRAINED MODEL
+Expected: World			         Actual: Rating
+Expected: Sports			 Actual: The
+Expected: World			         Actual: Science
+Expected: Science			 Actual: is
+Expected: Business			 Actual: Science
+Expected: Science			 Actual: Business
+Expected: Business			 Actual: Business
+Expected: Sports			 Actual: Sports
+Expected: World			         Actual: World
+Expected: Business			 Actual: Answer
+		BLEU		ROUGE		BERTSCORE
+		0.3000		0.3000		0.8167
+
+
+EVALUATING FINE-TUNED MODEL
+Expected: World		        	 Actual: Science
+Expected: Sports			 Actual: Sports
+Expected: World	        		 Actual: World
+Expected: Science			 Actual: Science
+Expected: Business			 Actual: Business
+Expected: Science			 Actual: Science
+Expected: Business			 Actual: Science
+Expected: Sports			 Actual: Sports
+Expected: World			         Actual: World
+Expected: Business			 Actual: Business
+		BLEU		ROUGE		BERTSCORE
+		0.8000		0.8000		0.9549
+
+
+EVALUATING RE-TUNED MODEL
+Expected: World	        		 Actual: is
+Expected: Sports			 Actual: is
+Expected: World			         Actual: is
+Expected: Science			 Actual: is
+Expected: Business			 Actual: is
+Expected: Science			 Actual: is
+Expected: Business			 Actual: is
+Expected: Sports			 Actual: is
+Expected: World			         Actual: is
+Expected: Business			 Actual: Business
+		BLEU		ROUGE		BERTSCORE
+		0.1000		0.1000		0.7273
+
+```
 
 ## References
 This medium blog was used as a reference to utilize the `unsloth` library:
