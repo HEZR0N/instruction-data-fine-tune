@@ -1,20 +1,18 @@
 # Instruction Finetuning 
+## Summary
 This repo was created for an assignment in my NLP/LLM class. The objectives were to:
  - create a new instruction dataset (based on a pre-existing non-instruction dataset)
  - fine-tuned the pre-trained model once with the new instruction dataset
- - fine-tune the pre-trained model with a dataset that is a combination of hte original dataset the pre-trained model was trained on and the new instruction dataset
+ - fine-tune the pre-trained model with a dataset that is a combination of the original dataset the pre-trained model was trained on and the new instruction dataset
  - examine the differences in performance across the pre-trained model, the model fine-tuned on the new instruction dataset, and the model fine-tuned on both the pre-trained model's dataset and the new instruction dataset
 
-The original pre-trained model which will be fine-tuned is:
- - https://huggingface.co/unsloth/OpenHermes-2.5-Mistral-7B-bnb-4bit    
-`OpenHermes-2.5` was trained off of this dataset
- - https://huggingface.co/datasets/teknium/OpenHermes-2.5
-However, for training, we will only use a subset of that dataset:
- - https://huggingface.co/datasets/jondurbin/airoboros-2.2
-The dataset that will be used to fine-tune `OpenHermes-2.5` will be based on this dataset
- - https://huggingface.co/datasets/ag_news
+## Base Models and Datasets
+ - [OpenHermes-2.5-Mistral-7B](https://huggingface.co/unsloth/OpenHermes-2.5-Mistral-7B-bnb-4bit): I chose the `OpenHermes-2.5` model specifically because the data it was trained on is publicly available and a speedy 4-bit version of the model is available.     
+ - [OpenHermes-2.5]([url](https://huggingface.co/datasets/teknium/OpenHermes-2.5)): the dataset that `OpenHermes-2.5-Mistral-7B` was trained on
+ - [airoboros-2.2]([url](https://huggingface.co/datasets/jondurbin/airoboros-2.2)) : a subset of the `OpenHermes-2.5-Mistral-7B` dataset, which is what will actually be used for training:
+ - [ag_news](https://huggingface.co/datasets/ag_news): a non-instruction based dataset which will be turned into an instuction-based dataset for fine-tuning `OpenHermes-2.5-Mistral-7B` for text classifcation
 
-The links to the fine-tuned versions of the `OpenHermes-2.5` model can be found in `MODEL_LINKS.md`
+The links to the fine-tuned versions of the `OpenHermes-2.5-Mistral-7B` model can be found in `MODEL_LINKS.md`
 ## Requirements
  - Python 3.11.8
 
