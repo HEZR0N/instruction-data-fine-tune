@@ -11,7 +11,7 @@ However, for training, we will only use a subset of that dataset:
 The dataset that will be used to fine-tune `OpenHermes-2.5` will be based on this dataset
  - https://huggingface.co/datasets/ag_news
 
-The links to the fine-tuned versions of the `OpenHermes-2.5` model can be found in `model_links.md`
+The links to the fine-tuned versions of the `OpenHermes-2.5` model can be found in `MODEL_LINKS.md`
 ## Requirements
  - Python 3.11.8
 
