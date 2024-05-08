@@ -10,6 +10,8 @@ However, for training, we will only use a subset of that dataset:
  - https://huggingface.co/datasets/jondurbin/airoboros-2.2
 The dataset that will be used to fine-tune `OpenHermes-2.5` will be based on this dataset
  - https://huggingface.co/datasets/ag_news
+
+The links to the fine-tuned versions of the `OpenHermes-2.5` model can be found in `model_links.md`
 ## Requirements
  - Python 3.11.8
 
@@ -21,6 +23,8 @@ pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformer
 ## Usage
 
 ### Fine-tuning OpenHermes
+You may go to the next section if you wish to use the fine-tuned models I provided in `model_links.md`. Otherwise, to fine-tune the models yourself, run these steps. 
+
 1. Run `python download_model_and_data.py` to download and save the model and datasets locally
  - This will download the pretrained `OpenHermes-2.5-Mistral-7B` model and 2 datasets
    - The `OpenHermes-2.5-Mistral-7B` model was trained on a dataset (`teknium/OpenHermes-2.5`) with 1,000,000 elements, which itself is comprised of other smaller datasets. Due to time constraints, we will one of the sub-datasets, `airoboros-2.2`
