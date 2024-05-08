@@ -38,7 +38,7 @@ You may go to the next section if you wish to use the fine-tuned models I provid
  ### Evaluating the Models
  Uploading soon
 
-## Metrics
+## Evaluation Metrics
 Uploading soon
 
 ## References
