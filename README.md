@@ -1,6 +1,9 @@
 # Instruction Finetuning 
-This repo was created for an assignment in my NLP/LLM class. The goal was to create a new instruction dataset (based on a pre-existing non-instruction dataset), fine-tuned model once with the new dataset and once with a combination of
-the original dataset and the newset that the model was trained on, and examine the differences in performance.
+This repo was created for an assignment in my NLP/LLM class. The objectives were to:
+ - create a new instruction dataset (based on a pre-existing non-instruction dataset)
+ - fine-tuned the pre-trained model once with the new instruction dataset
+ - fine-tune the pre-trained model with a dataset that is a combination of hte original dataset the pre-trained model was trained on and the new instruction dataset
+ - examine the differences in performance across the pre-trained model, the model fine-tuned on the new instruction dataset, and the model fine-tuned on both the pre-trained model's dataset and the new instruction dataset
 
 The original pre-trained model which will be fine-tuned is:
  - https://huggingface.co/unsloth/OpenHermes-2.5-Mistral-7B-bnb-4bit    
