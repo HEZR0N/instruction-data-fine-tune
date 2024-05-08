@@ -23,7 +23,7 @@ pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformer
 ## Usage
 
 ### Fine-tuning OpenHermes
-You may go to the next section if you wish to use the fine-tuned models I provided in `model_links.md`. Otherwise, to fine-tune the models yourself, run these steps. 
+You may go to the next section if you wish to use the fine-tuned models I provided in `MODEL_LINKS.md`. Otherwise, to fine-tune the models yourself, run these steps. 
 
 1. Run `python download_model_and_data.py` to download and save the model and datasets locally
  - This will download the pretrained `OpenHermes-2.5-Mistral-7B` model and 2 datasets
