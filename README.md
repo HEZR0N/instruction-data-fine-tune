@@ -12,7 +12,11 @@ This repo was created for an assignment in my NLP/LLM class. The objectives were
  - [airoboros-2.2](https://huggingface.co/datasets/jondurbin/airoboros-2.2) : a subset of the `OpenHermes-2.5-Mistral-7B` dataset, which is what will actually be used for training:
  - [ag_news](https://huggingface.co/datasets/ag_news): a non-instruction based dataset which will be turned into an instuction-based dataset for fine-tuning `OpenHermes-2.5-Mistral-7B` for text classifcation
 
-The links to the fine-tuned versions of the `OpenHermes-2.5-Mistral-7B` model can be found in `MODEL_LINKS.md`
+## New Models and Datasets
+ - Instruction-based dataset version of the `ag_news` dataset: [mixed_news_instruction_dataset](https://utsacloud-my.sharepoint.com/:f:/g/personal/hezron_perez_my_utsa_edu/ErkgebMbU9xBpjPhIdwkeRkBvRJcPabLh58lJcJ6I87HBg?e=QngS7m)
+ - Model fine-tuned on the `mixed_news_instruction_dataset`: [openhermes_finetuned_model](https://utsacloud-my.sharepoint.com/:f:/g/personal/hezron_perez_my_utsa_edu/El7_4BlZFLJLmHGmyOQYPckBW3opf24mi3DGMxv5q2f4Dg?e=XkYmZp)
+ - Model fine-tuned on the `mixed_news_instruction_dataset` and a subset of the `openhermes_dataset`: [openhermes_retune_finetuned_model](https://utsacloud-my.sharepoint.com/:f:/g/personal/hezron_perez_my_utsa_edu/EvN7Hmq0xsRHtK2PWLXcTfoBBGG9vWWcQwG8tiv6Y-C8jQ?e=W5Pphv)
+
 ## Requirements
  - Python 3.11.8
 
@@ -24,7 +28,7 @@ pip install transformers trl rouge bert_score evaluate nltk bitsandbytes xformer
 ## Usage
 
 ### Fine-tuning OpenHermes
-You may go to the next section if you wish to use the fine-tuned models I provided in `MODEL_LINKS.md`. Otherwise, to fine-tune the models yourself, run these steps. 
+You may go to the next section if you wish to use the fine-tuned models I provided in `New Models and Datasets` section above. Otherwise, to fine-tune the models yourself, run these steps: 
 
 1. Run `python download_model_and_data.py` to download and save the model and datasets locally
  - This will download the pretrained `OpenHermes-2.5-Mistral-7B` model and 2 datasets
