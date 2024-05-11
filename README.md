@@ -43,7 +43,7 @@ You may go to the next section if you wish to use the fine-tuned models I provid
 1. Run `python eval_with_mixed_news_instruction_dataset.py` to evaluate the 3 models. See `Evaluation Metrics` below
 
 ## Evaluation Metrics
-The fine-tuned model performed the best, as expected. Surprisingly though, the re-tuned model performed te worst. 
+The fine-tuned model performed the best, as expected. Surprisingly though, the re-tuned model performed the worst. I thin this might have to do with the fact that 2 training sets were so different (ie `mixed_news_instruction_dataset` had a one word response, while the OpenHermes-2.5 dataset had long paragraph responses.) such that objectives of the each dataset conflicted with one another, leading to a degredation in performance.
 
 ```
 EVALUATING PRE-TRAINED MODEL
