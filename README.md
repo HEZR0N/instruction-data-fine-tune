@@ -1,7 +1,7 @@
 # Instruction Finetuning 
 ## Summary
 This repo was created for an assignment in my NLP/LLM class. The objectives were to:
- - create a new instruction dataset (based on a pre-existing non-instruction dataset)
+ - create a new instruction dataset of size 6000 (3000 `train` and 3000 `test`) (based on a pre-existing non-instruction dataset)
  - fine-tuned the pre-trained model once with the new instruction dataset
  - fine-tune the pre-trained model with a dataset that is a combination of the original dataset the pre-trained model was trained on and the new instruction dataset
  - examine the differences in performance across the pre-trained model, the model fine-tuned on the new instruction dataset, and the model fine-tuned on both the pre-trained model's dataset and the new instruction dataset
